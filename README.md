@@ -1,7 +1,5 @@
 # miniparser
 
-# Mini Parser
-
 A lightweight C library for robust string-to-integer parsing with comprehensive error handling.
 
 ## Overview
@@ -15,13 +13,13 @@ This project serves as a foundation for building more complex tokenizers and par
 **Completed:**
 - ✅ NULL pointer validation
 - ✅ Empty string detection
-- ✅ Digit validation (0-9 only)
+- ✅ Digit validation (0-9)
 - ✅ Invalid character detection (tabs, newlines, non-numeric)
 - ✅ No spaces between digits allowed
+- ✅ Negative sign support
+- ✅ Multiple sign rejection
 
 **In Progress:**
-- 🔄 Single negative sign support (beginning only)
-- 🔄 Multiple sign rejection
 - 🔄 Overflow detection (INT_MAX/INT_MIN bounds)
 - 🔄 Leading zeros handling (valid but removed in output)
 
@@ -64,7 +62,7 @@ int str_to_int(const char* str, int* out);
 
 **Example:**
 ```c
-#include "parser.h"
+#include "miniparser.h"
 
 int main() {
     int result;
