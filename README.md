@@ -31,7 +31,8 @@ This project serves as a foundation for building more complex tokenizers and par
 ## Roadmap
 
 ### Phase 1: Core Parser (Current)
-- Robust `str_to_int()` implementation
+- ✅ `str_to_int()` - decimal parsing
+- 🔄 `str_to_int_base()` - multi-base parsing (binary, octal, hex)
 - Comprehensive error handling
 - Unit tests
 

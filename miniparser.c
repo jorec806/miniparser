@@ -44,9 +44,6 @@ static bool valid_str_num(const char* str, size_t index){
     return true;
 }
 
-//si el primero no es signo, deben ser solo numeros 
-//si el primero es - o mas, el resto puros numeros, pero no debe haber menos de 2 elementos
-
 static bool num_and_sign(const char* str)
 {
     if (str[0] == '-'){
@@ -83,6 +80,8 @@ int str_to_int(const char* str, int* out)
     } else {
         total = convert_to_int(str, 0);
     }
+
+    //Overflow, underflow detection
 
     *out = total;
     return 0;    
